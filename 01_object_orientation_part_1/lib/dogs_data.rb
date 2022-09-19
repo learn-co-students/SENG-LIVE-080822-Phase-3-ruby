@@ -114,3 +114,6 @@ $dogs_data = [
     image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822337/sn-color_qesmhx.jpg"
   }
 ]
+
+$rose = Dog.new('rose',11,'cat','rose.jpg')
+$cookie = Dog.new('cookie',1,'dachshund','cookie.jpg')
