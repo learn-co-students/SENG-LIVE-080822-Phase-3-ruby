@@ -23,7 +23,7 @@ $cats_data = [
 ]
 $dogs_data = [
   {
-    name: "Zeuse",	
+    name: "Zeus",	
     age: "1.5 years",
     breed:	"Husky-Staffordshire-mix",
     image_url: "../assets/zuse.jpg"
@@ -143,3 +143,8 @@ $dogs_data = [
     image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822337/sn-color_qesmhx.jpg"
   }
 ]
+
+# dogs_data.forEach((d) => Dog.new(d))
+$dogs_data.each{|d| Dog.new(d)}
+
+$cats_data.each{|c| Cat.new(c)}
