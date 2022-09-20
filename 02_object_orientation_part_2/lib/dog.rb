@@ -3,12 +3,11 @@ class Dog
   attr_accessor :name, :age, :image_url, :last_fed_at, :last_walked_at
   # ✅ 1. class variable: all - holds all dogs we have saved
   
-  # initialize with an optional hash of attributes
-  def initialize(name, age, breed, image_url ) 
-    @name = name
-    @age = age
-    @breed = breed
-    @image_url = image_url
+  def initialize(attributes) 
+    @name = attributes[:name]
+    @age = attributes[:age]
+    @breed = attributes[:breed]
+    @image_url = attributes[:image_url]
     @last_fed_at = nil
     @last_walked_at = nil
   end
