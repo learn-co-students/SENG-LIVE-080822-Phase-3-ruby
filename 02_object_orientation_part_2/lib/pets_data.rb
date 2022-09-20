@@ -2,7 +2,7 @@ $cats_data = [
   {
     name:"rose",
     age: "11 years",
-    breed: "Domestic longhair",
+    breed: "../assets/rose.jpg",
     image_url: false,
     indoor: true
   },
@@ -23,10 +23,16 @@ $cats_data = [
 ]
 $dogs_data = [
   {
-    name: "Olivia",	
-    age: "4 years",
-    breed:	"Terrier",
-    image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1631229064/zx6CPsp_d_utkmww.webp"
+    name: "Zeuse",	
+    age: "1.5 years",
+    breed:	"Husky-Staffordshire-mix",
+    image_url: "../assets/zuse.jpg"
+  },
+  {
+    name: "Cookie",	
+    age: "1 years",
+    breed:	"dachshund",
+    image_url: "../assets/cookie.jpg"
   },
   {
     name: "Molly",	
