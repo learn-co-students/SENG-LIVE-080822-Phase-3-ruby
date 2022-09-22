@@ -36,4 +36,16 @@ class Owner
     
     #Instance methods
     #Adopt a pet
+    def adopt_pet(pet)
+        pet.owner_id = self.id
+    end 
+
+    def pets
+        Pet.all.filter{|p| p.owner_id == self.id}
+    end 
+
+    def pet_names
+        self.pets.map{|p| p.name}
+    end 
+
 end 
