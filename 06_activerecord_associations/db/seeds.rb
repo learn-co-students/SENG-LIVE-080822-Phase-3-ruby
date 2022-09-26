@@ -168,18 +168,18 @@ $owner_data = [
       name: "Snoopy",
       age: "22 years",
       breed: "Snooop",
-      image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822337/sn-color_qesmhx.jpg"
+      image_url: "https://res.cloudinary.com/dnocv6uwb/image/upload/v1629822337/sn-color_qesmhx.jpg",
     }
   ]
   
-  
-  Pet.destroy_all
-  Handler.destroy_all
-  Owner.destroy_all
+
 
   $owner_data.each{|o| Owner.create(o)}
   $cats_data.each{|c| Pet.create(c)}
   $dogs_data.each{|d| Pet.create(d)}
   $handler_data.each{|h| Handler.create(h)}
+  Pet.all.each{|p| p.update(owner_id:Owner.all.sample.id)}
+  20.times{Appointment.create(request:'walk', time:Time.now, handler_id: Handler.all.sample.id, pet_id: Pet.all.sample.id)}
+  20.times{Appointment.create(request:'vist', time:Time.now, handler_id: Handler.all.sample.id, pet_id: Pet.all.sample.id)}
 
 puts '🐈 Done! 🐕 '
