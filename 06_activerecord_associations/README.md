@@ -38,6 +38,8 @@ end
 6. Add Associations
 7. Seed 
 
+#end
+
 ```
 reviews 
     content: string
