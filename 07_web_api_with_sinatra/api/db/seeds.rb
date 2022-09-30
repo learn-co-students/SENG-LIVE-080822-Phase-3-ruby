@@ -173,7 +173,10 @@ $dogs_data = [
 ]
 
 
-$cats_data.each{|c| Pet.create(c)}
+$cats_data.each do |c| 
+  cat = Cat.create(c)
+  cat.indoor = true
+end 
 $dogs_data.each{|d| Pet.create(d)}
 $handler_data.each{|h| Handler.create(h)}
 25.times{Appointment.create(request:'walk', time:Time.now, pet_id: Pet.all.sample.id,handler_id:Handler.all.sample.id)}

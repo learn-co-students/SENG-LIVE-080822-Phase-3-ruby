@@ -6,6 +6,7 @@ class CreatePets < ActiveRecord::Migration[6.1]
       t.string :image_url
       t.integer :age
       t.integer :owner_id
+      t.boolean :indoor
     end
   end
 end

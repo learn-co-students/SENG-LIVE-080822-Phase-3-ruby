@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2022_07_26_003119) do
     t.string "image_url"
     t.integer "age"
     t.integer "owner_id"
+    t.boolean "indoor"
   end
 
 end
